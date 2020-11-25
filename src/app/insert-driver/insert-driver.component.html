@@ -1,0 +1,44 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div style="text-align: center"></div>
+<form>
+    <fieldset>
+        <legend class="text-center">Insert Driver Form </legend>
+
+        <div class="form-group">
+            <label for="Name"><span class="req">* </span> Name: </label>
+            <input required type="text" [(ngModel)]="driver.username" name="name" id="name" class="form-control phone"
+                maxlength="28" placeholder="Enter your fullname..." />
+        </div>
+
+        <div class="form-group">
+            <label for="firstname"><span class="req">* </span> Email: </label>
+            <input class="form-control" type="text" [(ngModel)]="driver.email" name="email" id="txt" required
+                placeholder="Enter valid email address" />
+            <div id="errFirst"></div>
+        </div>
+        <div class="form-group">
+            <label for="email"><span class="req">* </span>Password:</label>
+            <input class="form-control" type="password" [(ngModel)]="driver.password" name="password" id="txt" required
+                placeholder="Type your Password here">
+        </div>
+        <div class="form-group">
+            <label for="password">
+                <span class="req">* </span>Mobile Number:
+            </label>
+            <input class="form-control" type="number" [(ngModel)]="driver.mobileNumber" name="Mobile Number" id="txt"
+                required placeholder="Enter your Mobile Number">
+        </div>
+        <div class="form-group">
+            <label for="Mobile Number">
+                <span class="req">* </span>licenseNo:
+            </label>
+            <input class="form-control" type="number" [(ngModel)]="driver.licenseNo " name="licenseNo" id="txt" required
+                placeholder="Enter your License Number">
+        </div>
+        <div class="form-group">
+            <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="InsertNow()">
+        </div>
+    </fieldset>
+</form>
