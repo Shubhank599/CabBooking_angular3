@@ -12,10 +12,11 @@ export class DriverInsertionService {
   {
     return this.http.post("http://localhost:8079/driver/add",driver,{responseType: 'text' as 'json'});
   }
-  public updateDriver(driver:any)
+  public updateDriver(Id:any)
   {
-    return this.http.put("http://localhost:8088/driver/update/20",driver,{responseType: 'text' as 'json'});
+    return this.http.put("http://localhost:8079/driver/update/20",Id,{responseType: 'text' as 'json'});
   }
+
 
   public delete(driver:any)
   {
